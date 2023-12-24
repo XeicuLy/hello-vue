@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { computed, reactive } from 'vue'
+import { computed, reactive } from 'vue';
 
 // リアクティブなテンプレート変数をまとめて用意
 const data = reactive({
   PI: 3.14,
   radius: Math.round(Math.random() * 10)
-})
+});
 // 円の面積の算出プロパティを用意
-const area = computed(() => data.radius * data.radius * data.PI)
+const area = computed(() => data.radius * data.radius * data.PI);
 // 半径のテンプレート変数に新しい乱数を1秒ごとに格納
 setInterval(() => {
-  data.radius = Math.round(Math.random() * 10)
-}, 1000)
+  data.radius = Math.round(Math.random() * 10);
+}, 1000);
 </script>
 
 <template>
